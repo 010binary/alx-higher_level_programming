@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# setting the enviroment variable
+python3 "$PYFILE"
