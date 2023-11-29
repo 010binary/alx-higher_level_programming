@@ -2,7 +2,11 @@
 import random
 number = random.randint(-10000, 10000)
 
-last_digit = int(str(number)[-1])
+if number < 0:
+    last_digit = -int(str(abs(number))[-1])
+else:
+    last_digit = int(str(number)[-1])
+
 first_state = f'Last digit of {number} is {last_digit}'
 less_than = "and is less than 6 and not 0"
 zero = 'and is 0'
