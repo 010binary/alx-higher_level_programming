@@ -16,4 +16,4 @@ if __name__ == "__main__":
         sys.exit(1)
 
     result = operators[operator](a, b)
-    print(f"{a} {operator} {b} = {result}")
+    print("{} + {} = {}".format(a, b, add(a, b)))
