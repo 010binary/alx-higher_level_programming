@@ -8,20 +8,20 @@ if __name__ == "__main__":
         print("Usage: ./calculator.py <a> <operator> <b>")
         sys.exit(1)
 
-    operand1, operator, operand2 = int(sys.argv[1]), sys.argv[2], int(sys.argv[3])
+    a, operator, c = int(sys.argv[1]), sys.argv[2], int(sys.argv[3])
 
     result = None
 
     if operator == '+':
-        result = add(operand1, operand2)
+        result = add(a, c)
     elif operator == '-':
-        result = sub(operand1, operand2)
+        result = sub(a, c)
     elif operator == '*':
-        result = mul(operand1, operand2)
+        result = mul(a, c)
     elif operator == '/':
-        result = div(operand1, operand2)
+        result = div(a, c)
     else:
         print("Unknown operator. Available operators: +, -, *, and /")
         sys.exit(1)
 
-    print(f"{operand1} {operator} {operand2} = {result}")
+    print(f"{a} {operator} {c} = {result}")
