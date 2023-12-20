@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""provides functionality related to square"""
+"""provides functionality related to class square"""
 
 
 class Square:
