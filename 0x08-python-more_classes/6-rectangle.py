@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """defines a rectangle and method to delete and track the number of instance"""
+    """defines a rectangle and method to delete and track the number of inst"""
 
     number_of_instances = 0
 
