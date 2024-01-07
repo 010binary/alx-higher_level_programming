@@ -29,7 +29,7 @@ Now test it:
     >>> print_square(0)
 
 
-    >>> print_square("ALX")
+    >>> print_square("ALU")
     Traceback (most recent call last):
     TypeError: size must be an integer
 
@@ -37,11 +37,11 @@ Now test it:
     Traceback (most recent call last):
     TypeError: size must be an integer
 
-    >>> print_square(-7)
+    >>> print_square(-9)
     Traceback (most recent call last):
     ValueError: size must be >= 0
 
-    >>> print_square(-8.0)
+    >>> print_square(-3.0)
     Traceback (most recent call last):
     TypeError: size must be an integer
 
