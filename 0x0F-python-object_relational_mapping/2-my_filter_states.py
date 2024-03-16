@@ -21,9 +21,6 @@ if __name__ == "__main__":
 
     #Executing my query
     curs = db.cursor()
-    curs.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'"
-                 .format(sys.argv[4]))
-    rows = curs.fetchall()
-    for row in rows:
-        print(row)
-    curs.close()
+    curs.execute("SELECT *\
+                FROM `states` WHERE BINARY `name` = '{}'".format(argv[4]))
+    [print(state) for state in curs.fetchall()]
