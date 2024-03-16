@@ -18,8 +18,6 @@ if __name__ == "__main__":
             passwd=argv[2],
             db=argv[3])
 
-
-    #Executing my query
     curs = db.cursor()
     curs.execute("SELECT *\
                 FROM `states` WHERE BINARY `name` = '{}'".format(argv[4]))
