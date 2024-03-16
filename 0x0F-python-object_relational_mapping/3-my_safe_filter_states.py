@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
 displays all values in the states table of hbtn_0e_0_usa
-where name matches the argument
+where name matches the argument. But this time,
+write one that is safe from MySQL injections!
 """
 
 
@@ -18,12 +19,12 @@ if __name__ == "__main__":
             passwd=argv[2],
             db=argv[3])
 
-
     #Executing my query
     curs = db.cursor()
-    curs.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'"
-                 .format(sys.argv[4]))
+    match = sys.argv[4]
+    curs.execute("SELECT * FROM states WHERE name LIKE %s", (match, ))
     rows = curs.fetchall()
     for row in rows:
         print(row)
     curs.close()
+    db.close()
