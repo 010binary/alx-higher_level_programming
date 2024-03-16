@@ -19,10 +19,9 @@ if __name__ == "__main__":
             passwd=argv[2],
             db=argv[3])
 
-    #Executing my query
     curs = db.cursor()
     match = sys.argv[4]
-    curs.execute("SELECT * FROM states WHERE name LIKE %s", (match, ))
+    curs.execute("SELECT * FROM `states` WHERE name LIKE %s", (match, ))
     rows = curs.fetchall()
     for row in rows:
         print(row)
