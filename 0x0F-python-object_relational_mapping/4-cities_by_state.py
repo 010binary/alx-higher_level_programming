@@ -18,7 +18,10 @@ if __name__ == "__main__":
             db=argv[3])
 
     curs = db.cursor()
-    curs.execute("""SELECT cities.id, cities.name, states.name FROM
-                cities INNER JOIN states ON states.id=cities.state_id""")
+    curs.execute("SELECT `cur`.`id`, `cur`.`name`, `st`.`name` \
+                FROM `cities` as `cur` \
+                INNER JOIN `states` as `st` \
+                ON `cur`.`state_id` = `st`.`id` \
+                ORDER BY `cur`.`id`")
     [print(city) for city in curs.fetchall()]
     curs.close()
