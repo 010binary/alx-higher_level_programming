@@ -20,10 +20,6 @@ if __name__ == "__main__":
             db=argv[3])
 
     curs = db.cursor()
-    match = sys.argv[4]
-    curs.execute("SELECT * FROM `states` WHERE name LIKE %s", (match, ))
-    rows = curs.fetchall()
-    for row in rows:
-        print(row)
+    curs.execute("SELECT * FROM `states`")
+    [print(state) for state in curs.fetchall() if state[1] == argv[4]]
     curs.close()
-    db.close()
