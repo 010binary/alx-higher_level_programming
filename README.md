@@ -1,4 +1,4 @@
-Sure, let's break down the main points of this passage in simpler terms:
+let's break down the main points of this passage in simpler terms:
 
 ### Python's Appeal:
 
