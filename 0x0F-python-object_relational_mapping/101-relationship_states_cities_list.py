@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
 Lists all State objects, and corresponding City objects,
-contained in the database hbtn_0e_101_usa
 """
 
 from sys import argv
