@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """A script does:
-- take in URL and send an email 
+- take in URL and send an email
 - sends a POST request to the url
-- takes email as a variable and
+- takes email as a variable
 """
 
 

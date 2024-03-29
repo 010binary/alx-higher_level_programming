@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Script that fetches https://alx-intranet.hbtn.io/status
-this can be moded if need be 
+this can be moded if need be
 """
 
 
