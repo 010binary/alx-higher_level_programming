@@ -4,6 +4,7 @@
 - sends a POST request to the url
 - takes email as a variable and
 """
+
 import sys
 import urllib.parse
 import urllib.request
