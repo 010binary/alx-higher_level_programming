@@ -3,7 +3,10 @@
 Script that fetches https://alx-intranet.hbtn.io/status
 this can be moded if need be 
 """
+
+
 import requests
+
 
 url = "https://alx-intranet.hbtn.io/status"
 
