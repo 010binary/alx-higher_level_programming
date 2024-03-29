@@ -3,7 +3,6 @@
 - take in URL and send an email 
 - sends a POST request to the url
 - takes email as a variable and
-- display the body of the response
 """
 import sys
 import urllib.parse
