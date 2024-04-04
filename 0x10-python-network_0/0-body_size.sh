@@ -1,4 +1,3 @@
 #!/bin/bash
-# Display size of body of response; ./0-body_size.sh 0.0.0.0:5000
-
+# Display size of body of response; ./0-body_size.sh <url>
 curl -s "$1" | wc -c
