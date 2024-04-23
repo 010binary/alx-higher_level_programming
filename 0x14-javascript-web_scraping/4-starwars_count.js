@@ -8,27 +8,20 @@ if (process.argv.length < 3) {
   process.exit(1);
 }
 
-const apiUrl = process.argv[2];
-const characterId = '18'; // Wedge Antilles' character ID
+let num = 0;
 
-// Make a request to the Star Wars API
-request(apiUrl, (error, response, body) => {
+request.get(process.argv[2], (error, response, body) => {
   if (error) {
-    console.error(error);
-    process.exit(1);
+    console.log(error);
+  } else {
+    const content = JSON.parse(body);
+    content.results.forEach((film) => {
+      film.characters.forEach((character) => {
+        if (character.includes(18)) {
+          num += 1;
+        }
+      });
+    });
+    console.log(num);
   }
-
-  if (response.statusCode !== 200) {
-    console.error(`Unexpected status code: ${response.statusCode}`);
-    process.exit(1);
-  }
-
-  // Parse the response body as JSON
-  const data = JSON.parse(body);
-
-  const filmsWithWedgeAntilles = data.results.filter(film =>
-    film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)
-  );
-
-  console.log(filmsWithWedgeAntilles.length);
 });
